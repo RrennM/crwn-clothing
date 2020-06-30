@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans Condensed', sans-serif;
   padding: 20px 60px;
 }
 
-a {
+a,
+div.option {
   color: #333;
   text-decoration: none;
   text-transform: uppercase;
