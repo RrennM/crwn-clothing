@@ -35,11 +35,11 @@ const Header = ({ currentUser, hidden }) => (
     </div>
     { hidden ? null : <CartDropdown /> }
   </div>
-)
+);
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   hidden: selectCartHidden
-})
+});
 
 export default connect(mapStateToProps)(Header);

@@ -16,7 +16,7 @@ const CollectionItem = ({ item, addItem }) => {
       <div 
         className="image"
         style={{
-          backgroundImage: `url('${imageUrl}')`
+          backgroundImage: `url(${imageUrl})`
         }}
         />
       <div className='collection-footer'>
@@ -25,11 +25,11 @@ const CollectionItem = ({ item, addItem }) => {
       </div>
       <CustomButton onClick= {() => addItem(item)} inverted>ADD TO CART</CustomButton>
     </div>
-  )
-}
+  );
+};
 
 const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
-})
+});
 
 export default connect(null, mapDispatchToProps)(CollectionItem);

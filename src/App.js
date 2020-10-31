@@ -42,11 +42,11 @@ class App extends React.Component {
         setCurrentUser(userAuth);
       }
     });
-  }
+  };
 
-  componenetWillUnmount() {
+  componentWillUnmount() {
     this.unsubscribeFromAuth();
-  } 
+  } ;
 
   render() {
     return (
@@ -61,15 +61,15 @@ class App extends React.Component {
       </div>
     );
   }
-}
+};
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
-})
+});
 
 export default connect(
   mapStateToProps, 
