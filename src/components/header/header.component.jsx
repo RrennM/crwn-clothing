@@ -14,7 +14,7 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionDiv, OptionLink } from './header.styles';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './header.styles';
 
 const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
@@ -27,7 +27,7 @@ const Header = ({ currentUser, hidden }) => (
       <OptionLink to='/contact'>Contact</OptionLink>
       {
         currentUser ?
-        <OptionDiv onClick={() => auth.signOut()}>Sign Out</OptionDiv>
+        <OptionLink as='div' onClick={() => auth.signOut()}>Sign Out</OptionLink>
         :
         <OptionLink to='/signin'>Sign In</OptionLink>
       }
